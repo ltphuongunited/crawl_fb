@@ -195,7 +195,7 @@ class FacebookSpider(scrapy.Spider):
             post_user_id = str(post.css("h3._52jd._52jb._52jg._5qc3._4vc-._3rc4._4vc- strong a::attr(href)").extract_first())
             if post_user_id == "None":
                 post_user_id = str(post.css("h3._52jd._52jb._52jh._5qc3._4vc-._3rc4._4vc- strong a::attr(href)").extract_first())
-            # item['post_user_id'] = 'https://m.facebook.com' + post_user_id
+            
             item['post_user_id'] =  str(post_user_id).split("?")[0].split("/")[-1]
             if item['post_user_id'] == 'profile.php':
                 item['post_user_id'] = str(post_user_id).split("&")[0].split("?")[-1][3:] 

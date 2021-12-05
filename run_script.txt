@@ -1,0 +1,9 @@
+docker pull scrapinghub/splash
+
+docker run -p 8050:8050 scrapinghub/splash
+
+scrapy crawl facebook_login
+
+scrapy crawl facebook_profile
+
+scrapy crawl facebook_group

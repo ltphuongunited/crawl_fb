@@ -167,8 +167,7 @@ class FacebookSpider(scrapy.Spider):
             out.write('')
 
         yield SplashRequest(
-            # url="https://m.facebook.com/groups/236713123651143/permalink/854487381873711/?m_entstream_source=group",
-            url="https:/m.facebook.com/",
+            url="https://m.facebook.com/groups/236713123651143/permalink/854487381873711/?m_entstream_source=group",
             callback=self.parse,
             session_id="test",
             meta={
